@@ -3,9 +3,8 @@
 #include "./headers/receiver.h"
 #include "./headers/source.h"
 #include "headers/functions.h"
-
 #include <vector>
-// g++ -g -O2 -std=c++11 -pthread -march=native "$string/$file" -o "$string/$output" -lntl -lgmp -lm
+
 
 using std::cin;
 using std::cout;
