@@ -15,5 +15,5 @@ class RSA
         RSA(ZZ up, ZZ uq, ZZ ue, string uAlphabet);
         RSA(int, string);
         string cypher(string,ZZ,ZZ);
-        string decypher (string);
+        string decypher (string,ZZ,ZZ);
 };
