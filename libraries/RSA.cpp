@@ -70,7 +70,11 @@ string RSA::cypher(string message, ZZ publicKey, ZZ Nb)
         std::cout << "temp1.c_str():\t" << temp1.c_str() << std::endl;
         ZZ zTemp(INIT_VAL, temp1.c_str());
         std::cout << "temp antes:" << '\t' << zTemp << std::endl;
-        temp1 = zToString(powerZZ(zTemp, publicKey, Nb));
+        ZZ m; m=powerZZ(zTemp, publicKey, Nb);
+        ZZ r; r=powerZZ(m, this->d, this->N);
+        ZZ s; s=powerZZ(r, publicKey, Nb);
+        //temp1 = zToString(powerZZ(zTemp, publicKey, Nb));
+        temp1=zToString(s);
         std::cout << string(nDigits - (int)temp1.length(), '0') + temp1 << std::endl;
         tempCypher.push_back(string(nDigits - (int)temp1.length(), '0') + temp1);
     }
@@ -79,7 +83,7 @@ string RSA::cypher(string message, ZZ publicKey, ZZ Nb)
 }
 
 //descifrado del RSA
-string RSA::decypher(string message)
+string RSA::decypher(string message, ZZ publickey, ZZ Na)
 {
     string toReturn;
     int availableDigits = std::to_string((int)alphabet.length()).length();
@@ -90,7 +94,10 @@ string RSA::decypher(string message)
     {
         string temp1 = *i;
         ZZ zTemp(INIT_VAL, temp1.c_str());
-        temp1 = zToString(powerZZ(zTemp, d, N));
+        ZZ m; m=powerZZ(zTemp, this->d, this->N);
+        ZZ r; r=powerZZ(m, publickey, Na);
+        ZZ s; s=powerZZ(r, this->d, this->N);
+        temp1 = zToString(s);
         string auxiliar =  string((nDigits - 1) - (int)temp1.length(), '0') + temp1;
         while (modulo(auxiliar.length(), availableDigits) && i == temp.end() - 1)
         {
