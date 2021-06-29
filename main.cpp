@@ -19,12 +19,14 @@ int main()
     string mensaje;
     cout << "\nIngrese el mensaje a ser cifrado: ";
     getline(cin, mensaje);
+    ZZ ea=Emisor.e;
+    ZZ Na=Emisor.N;
     ZZ eb=Receptor.e;
     ZZ Nb=Receptor.N;
     //Emisor cifra
     string mensajeCifrado = Emisor.cypher(mensaje,eb,Nb);
     cout << "El mensajeCifrado es: " << mensajeCifrado << endl;
     //Receptor decifra
-    string mensajeDecifrado = Receptor.decypher(mensajeCifrado);
+    string mensajeDecifrado = Receptor.decypher(mensajeCifrado,ea,Na);
     cout << "El mensajeDecifrado es: " << mensajeDecifrado << endl;
 }
