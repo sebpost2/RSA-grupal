@@ -97,6 +97,7 @@ string RSA::decypher(string message, ZZ publickey, ZZ Na)
         ZZ m; m=powerZZ(zTemp, this->d, this->N);
         ZZ r; r=powerZZ(m, publickey, Na);
         ZZ s; s=powerZZ(r, this->d, this->N);
+        //temp1 = zToString(powerZZ(zTemp, d, N));
         temp1 = zToString(s);
         string auxiliar =  string((nDigits - 1) - (int)temp1.length(), '0') + temp1;
         while (modulo(auxiliar.length(), availableDigits) && i == temp.end() - 1)
