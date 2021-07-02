@@ -203,28 +203,6 @@ ZZ coordinateRNG::get_coordinate()
 //Utilizando test de fermat
 bool isPrime(ZZ x)
 {
-    /*
-    ZZ k, q, a;
-    k = 0;
-    while (moduloZZ(x - 1, rtl(ZZ(2), ++k)) == ZZ(0));
-    q = (x - 1) / rtl(ZZ(2), --k);
-
-
-    a = moduloZZ(coordinateRNG(ZZ(256)).next(), x - 1) + 1;
-
-    if (IsOne(powerZZ(a, q, x))) {
-        return 1;
-    }
-
-    ZZ j;
-    for (j = 0; j < k; j++) {
-        ZZ t = rtl(ZZ(2), j) * q;
-        if (powerZZ(a, t, x) == x - 1)
-            return 1;
-    }
-
-    return 0;
-    */
     ZZ res;
     ZZ y;
     ZZ gcd;
