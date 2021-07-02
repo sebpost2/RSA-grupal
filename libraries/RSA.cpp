@@ -47,12 +47,12 @@ RSA::RSA(ZZ nBits, string uAlphabet, string uSignature) :
     }
     d = moduloZZ(inversa(e, fiN), fiN);
 
-    /*std::cout << "p: " << p << std::endl;
-    std::cout << "q: " << q << std::endl;
+    //std::cout << "p: " << p << std::endl;
+    //std::cout << "q: " << q << std::endl;
     std::cout << "N: " << N << std::endl;
-    std::cout << "fiN: " << fiN << std::endl;
+    //std::cout << "fiN: " << fiN << std::endl;
     std::cout << "e: " << e << std::endl;
-    std::cout << "d: " << d << std::endl;*/
+    //std::cout << "d: " << d << std::endl;*/
 }
 
 //Cifrado del RSA
@@ -76,7 +76,7 @@ string RSA::cypher(string message, ZZ publicKey, ZZ Nb, bool withSig)
             //std::cout << "\nSin firma\n";
         }
         temp1 = zToString(m);
-        std::cout << string(nDigits - (int)temp1.length(), '0') + temp1 << std::endl;
+        //std::cout << string(nDigits - (int)temp1.length(), '0') + temp1 << std::endl;
         tempCypher.push_back(string(nDigits - (int)temp1.length(), '0') + temp1);
     }
 
