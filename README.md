@@ -1,5 +1,5 @@
 # RSA-grupal
-Grupo:
+Grupo:\n
 -Sebastian Tinajeros Estrada
 -Sebastian Gonzalo Postigo Avalos
 -Fabian Concha Sifuentes
