@@ -1,7 +1,7 @@
 # RSA-grupal
 
-Sebastian Tinajeros Estrada
-, Sebastian Gonzalo Postigo Avalos
+Sebastian Gonzalo Postigo Avalos
+, Sebastian Tinajeros Estrada
 , Fabian Concha Sifuentes
 , Joaquin Casusol Escalante
 , Frank Salas Ticona
